@@ -19,11 +19,8 @@ const App = () => {
         })
           .then(res => res.json()) 
           .then(data => setJoke(data.joke)); 
-    }, []); 
+    }); 
 
-    
-
-    
     return (
       <div>
          <h1>ACUDITS</h1>
