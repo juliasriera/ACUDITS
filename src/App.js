@@ -2,10 +2,15 @@
 import React, { useEffect, useState } from 'react';
 
 const App = () => {
-    const [joke, setJoke] = useState(null);
+    const [joke, setJoke] = useState([]);
+    const [acudit, setAcudit]=useState([])
+    
+
+    const handleClick = () => setAcudit(joke)
+         
  
     useEffect(() => {
-      fetch('https://icanhazdadjoke.com/', {  
+        fetch('https://icanhazdadjoke.com/', {  
         headers: {
 
             accept: "application/json"
@@ -17,13 +22,14 @@ const App = () => {
     }, []); 
 
     
-//<button onClick={() => {alert("Hello!")}}>Siguiente</button>
+
     
     return (
       <div>
       <h1>ACUDITS</h1>
+      <p>{acudit}</p>
     
-    <button onClick={() => {alert({"Hello!"})}}>Siguiente</button>
+    <button onClick= {handleClick}>Siguiente</button>
     </div>
     )
   }
