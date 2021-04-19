@@ -16,9 +16,9 @@ const App = () => {
             accept: "application/json"
         },
 
-    })
-      .then(res => res.json()) 
-      .then(data => setJoke(data.joke)); 
+        })
+          .then(res => res.json()) 
+          .then(data => setJoke(data.joke)); 
     }, []); 
 
     
@@ -26,11 +26,10 @@ const App = () => {
     
     return (
       <div>
-      <h1>ACUDITS</h1>
-      <p>{acudit}</p>
-    
-    <button onClick= {handleClick}>Siguiente</button>
-    </div>
+         <h1>ACUDITS</h1>
+         <p>{acudit}</p>
+         <button onClick= {handleClick}>Siguiente</button>
+      </div>
     )
   }
 
